@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.shoppingcart.ShoppingCartActivity">
+    <include android:id="@+id/header"
+             layout="@layout/shopping_row_item"/>
+
+    <ListView
+            android:id="@+id/tv_shopping_list"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@+id/header"
+            android:text="Hello World!"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            tools:text="Hi, I am kranthi this is an MVVM basics demo project"/>
+
+    <LinearLayout
+            android:id="@+id/et_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_shopping_list"
+            android:weightSum="1"
+            android:orientation="horizontal">
+
+        <EditText
+                android:id="@+id/et_shopping_item"
+                android:padding="10dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/shoppingItem"
+                android:layout_weight="0.4"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:inputType="text"
+                tools:ignore="Autofill"/>
+
+        <EditText
+                android:id="@+id/et_quantity"
+                android:padding="10dp"
+                android:gravity="center"
+                android:layout_weight="0.3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/quantity"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:inputType="number"
+                tools:ignore="Autofill"/>
+        <Button
+                android:id="@+id/btn_add_item"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="@string/add_to_cart"
+                android:textAllCaps="true"
+                android:maxLines="1"
+                android:layout_weight="0.3"
+                android:background="@color/colorAccent"/>
+    </LinearLayout>
+
+</RelativeLayout>
